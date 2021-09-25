@@ -6,7 +6,7 @@ var timerArea = document.getElementById("timer-area");
 var timerInterval;
 var secondsRemaining = 60;
 
-
+//timer for quiz 
 function startTimer(){
   timerInterval = setInterval( function(){
     timerArea.textContent = secondsRemaining + " seconds left";
@@ -225,27 +225,4 @@ function closeScoreModal() {
 function closeOptionModal() {
     document.getElementById('option-modal').style.display = "none"
 }
-
-let days = 2; //starting number of days
-let hours = 0; // starting number of hours
-let minutes = 2; // starting number of minutes
-let seconds = 5; // starting number of seconds
-
-// converts all to seconds
-let totalSeconds =
-days * 60 * 60 * 24 + hours * 60 * 60 + minutes * 60 + seconds;
-
-//temporary seconds holder
-let tempSeconds = totalSeconds;
-
-// calculates number of days, hours, minutes and seconds from a given number of seconds
-const convert = (value, inSeconds) => {
-if (value > inSeconds) {
-    let x = value % inSeconds;
-    tempSeconds = x;
-    return (value - x) / inSeconds;
-} else {
-    return 0;
-}
-};
 
