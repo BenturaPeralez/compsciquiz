@@ -7,15 +7,6 @@ var timerInterval;
 var secondsRemaining = 5;
 
 
-// Functions 
-function startGame(){
-  var wordChosen = allTheWords[wordIdx];
-  // take the word chosen and make it into an array 
-  currentWordArr = wordChosen.split("");     //   ["t", "h", "o", "r"]
-  startTimer();
-  displayTheWord();
-}
-
 function startTimer(){
   timerInterval = setInterval( function(){
     timerArea.textContent = secondsRemaining + " seconds left";
