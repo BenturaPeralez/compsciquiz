@@ -4,7 +4,7 @@ var timerArea = document.getElementById("timer-area");
 
 // Global variables 
 var timerInterval;
-var secondsRemaining = 5;
+var secondsRemaining = 60;
 
 
 function startTimer(){
@@ -12,12 +12,13 @@ function startTimer(){
     timerArea.textContent = secondsRemaining + " seconds left";
     secondsRemaining--;
 
-    if( secondsRemaining === 0 ){
+    if( secondsRemaining <0 ){
       clearInterval(timerInterval);
       checkForWonGame();
     }
   }, 1000)
 }
+startTimer();
  
  
 
